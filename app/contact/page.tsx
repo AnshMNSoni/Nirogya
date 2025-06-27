@@ -1,13 +1,12 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
@@ -18,8 +17,8 @@ const contactInfo = [
     icon: Mail,
     titleKey: "emailUs" as const,
     descKey: "emailDesc" as const,
-    contact: "developers.pyshell@gmail.com",
-    action: "mailto:developers.pyshell@gmail.com",
+    contact: "ansh.mn.soni7505@gmail.com",
+    action: "mailto:ansh.mn.soni7505@gmail.com",
   },
   {
     icon: Clock,
@@ -50,22 +49,41 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch("https://formspree.io/f/manjaenn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-    toast({
-      title: t("messageSent"),
-      description: t("messageSentDesc"),
-    })
+      if (response.ok) {
+        toast({
+          title: t("messageSent"),
+          description: t("messageSentDesc"),
+        })
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      category: "",
-      message: "",
-    })
-    setIsSubmitting(false)
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          category: "",
+          message: "",
+        })
+      } else {
+        throw new Error("Form submission failed")
+      }
+    } catch (error) {
+      toast({
+        title: t("error"),
+        description: t("errorDesc") || "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

@@ -324,11 +324,11 @@ export default function HomePage() {
                   <span>© <span className="text-green-600 dark:text-green-400 font-semibold">{new Date().getFullYear()} Nirogya.</span> {t("copyright")}</span>
                   <span className="hidden sm:inline">|</span>
                 </div>
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-2.5">
                   <div className="text-sm text-gray-600 dark:text-gray-400 text-center sm:text-right">
                     {t("developedBy")} <span className="text-green-600 dark:text-green-400 font-semibold">ansh.mn.soni</span>
                   </div>
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-2.5">
                     <a href="https://www.linkedin.com/in/anshmnsoni" target="_blank" rel="noopener noreferrer" className="group">
                       <svg className="h-6 w-6 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.337-.025-3.05-1.864-3.05-1.865 0-2.149 1.451-2.149 2.955v5.699h-3v-11h2.879v1.518h.041c.401-.761 1.381-1.564 2.843-1.564 3.039 0 3.604 2.001 3.604 4.602v6.444z" />

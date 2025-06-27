@@ -156,6 +156,8 @@ export const translations = {
     medicalEmergencyDesc:
       "If you're experiencing a medical emergency, don't use this contact form. Call 911 immediately or visit your nearest emergency room.",
     emergencyResources: "Emergency Resources",
+    error: "Something went wrong!",
+    errorDesc: "Check your Internet Connection and try again",
     messageSent: "Message Sent!",
     messageSentDesc: "Thank you for contacting us. We'll get back to you within 24 hours.",
 
@@ -405,6 +407,8 @@ export const translations = {
     medicalEmergencyDesc:
       "यदि आप चिकित्सा आपातकाल का सामना कर रहे हैं, तो इस संपर्क फॉर्म का उपयोग न करें। तुरंत 911 पर कॉल करें या अपने निकटतम आपातकालीन कक्ष में जाएं।",
     emergencyResources: "आपातकालीन संसाधन",
+    "error": "कुछ गलत हो गया!",
+  "errorDesc": "अपना इंटरनेट कनेक्शन जांचें और पुनः प्रयास करें",
     messageSent: "संदेश भेजा गया!",
     messageSentDesc: "हमसे संपर्क करने के लिए धन्यवाद। हम 24 घंटों के भीतर आपसे संपर्क करेंगे।",
 
@@ -653,6 +657,8 @@ export const translations = {
     medicalEmergencyDesc:
       "यदि भवन्तः चिकित्साआपत्कालस्य सम्मुखीभवन्ति तर्हि एतत् सम्पर्कप्रपत्रं न उपयुञ्जन्तु। तत्क्षणात् 911 इत्यत्र आह्वयन्तु अथवा स्वनिकटतमं आपत्कालीनकक्षं गच्छन्तु।",
     emergencyResources: "आपत्कालीनसाधनानि",
+    "error": "किञ्चित् दोषः जातः!",
+  "errorDesc": "स्वस्य जालसंज्ञायाः संयोजनं परीक्ष्य punar प्रयासं कुरुत",
     messageSent: "सन्देशः प्रेषितः!",
     messageSentDesc: "अस्माभिः सह सम्पर्कं कृतवन्तः इति धन्यवादः। वयं 24 घटासु भवद्भिः सह सम्पर्कं करिष्यामः।",
 
