@@ -162,9 +162,9 @@ export function RemedyCard({ remedy }: RemedyCardProps) {
           <div className="space-y-4">
             {remedy.steps.map((step, index) => (
               <div key={index} className="group relative">
-                {/* Progress Line */}
+                {/* Progress Line - hidden on mobile screens */}
                 {index < remedy.steps.length - 1 && (
-                  <div className="absolute left-6 top-12 w-0.5 h-8 bg-gradient-to-b from-green-200 to-blue-200 dark:from-green-800 dark:to-blue-800"></div>
+                  <div className="absolute left-6 top-12 w-0.5 h-8 bg-gradient-to-b from-green-200 to-blue-200 dark:from-green-800 dark:to-blue-800 hidden md:block"></div>
                 )}
 
                 <div className="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-green-50/50 to-blue-50/50 dark:from-green-950/30 dark:to-blue-950/30 border border-green-100 dark:border-green-800 hover:shadow-md transition-all duration-300 group-hover:scale-[1.02]">
@@ -289,6 +289,6 @@ export function RemedyCard({ remedy }: RemedyCardProps) {
           </CollapsibleContent>
         </Collapsible>
       </CardContent>
-    </Card>
+    </Card >
   )
 }
