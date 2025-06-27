@@ -119,17 +119,19 @@ export default function RemediesPage() {
         </div>
 
         {/* Search Form */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <Sparkles className="h-5 w-5 mr-2 text-green-600" />
+        <Card className="mb-8 shadow-lg rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 transition-all hover:shadow-xl">
+          <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950 dark:to-blue-950 p-6 rounded-t-xl">
+            <CardTitle className="flex items-center text-xl sm:text-2xl font-semibold text-green-700 dark:text-green-300">
+              <Sparkles className="h-6 w-6 sm:h-7 sm:w-7 mr-3 text-green-600 animate-pulse" />
               {t("describeSymptoms")}
             </CardTitle>
-            <CardDescription>{t("symptomsDescription")}</CardDescription>
+            <CardDescription className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
+              {t("symptomsDescription")}
+            </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div>
-              <Label htmlFor="symptoms" className="text-base font-medium">
+          <CardContent className="p-6 space-y-6">
+            <div className="space-y-2">
+              <Label htmlFor="symptoms" className="text-base font-medium text-gray-900 dark:text-gray-100">
                 {t("symptomsLabel")}
               </Label>
               <Input
@@ -138,14 +140,14 @@ export default function RemediesPage() {
                 placeholder={t("symptomsPlaceholder")}
                 value={symptoms}
                 onChange={(e) => setSymptoms(e.target.value)}
-                className="mt-2 text-base py-3"
+                className="mt-2 w-full text-base py-3 px-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 dark:focus:border-green-400 dark:focus:ring-green-900 transition-all duration-200"
                 onKeyPress={(e) => e.key === "Enter" && handleSearch()}
               />
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <Label htmlFor="age" className="text-base font-medium">
+              <div className="space-y-2">
+                <Label htmlFor="age" className="text-base font-medium text-gray-900 dark:text-gray-100">
                   {t("ageLabel")}
                 </Label>
                 <Input
@@ -154,22 +156,22 @@ export default function RemediesPage() {
                   placeholder={t("agePlaceholder")}
                   value={age}
                   onChange={(e) => setAge(e.target.value)}
-                  className="mt-2"
+                  className="mt-2 w-full text-base py-3 px-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 dark:focus:border-green-400 dark:focus:ring-green-900 transition-all duration-200"
                 />
               </div>
-              <div>
-                <Label htmlFor="gender" className="text-base font-medium">
+              <div className="space-y-2">
+                <Label htmlFor="gender" className="text-base font-medium text-gray-900 dark:text-gray-100">
                   {t("genderLabel")}
                 </Label>
                 <Select value={gender} onValueChange={setGender}>
-                  <SelectTrigger className="mt-2">
+                  <SelectTrigger className="w-full text-base py-3 px-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 dark:focus:border-green-400 dark:focus:ring-green-900 transition-all duration-200">
                     <SelectValue placeholder={t("selectGender")} />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="male">{t("male")}</SelectItem>
-                    <SelectItem value="female">{t("female")}</SelectItem>
-                    <SelectItem value="other">{t("other")}</SelectItem>
-                    <SelectItem value="prefer-not-to-say">{t("preferNotToSay")}</SelectItem>
+                  <SelectContent className="border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+                    <SelectItem value="male" className="text-base">{t("male")}</SelectItem>
+                    <SelectItem value="female" className="text-base">{t("female")}</SelectItem>
+                    <SelectItem value="other" className="text-base">{t("other")}</SelectItem>
+                    <SelectItem value="prefer-not-to-say" className="text-base">{t("preferNotToSay")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -179,7 +181,7 @@ export default function RemediesPage() {
               onClick={handleSearch}
               disabled={loading || !symptoms.trim()}
               size="lg"
-              className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700"
+              className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <>

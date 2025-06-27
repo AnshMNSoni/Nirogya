@@ -45,7 +45,7 @@ export function Preloader() {
 
         {/* Loading Text */}
         <p className="text-lg text-muted-foreground mb-8 animate-fade-in-delay">
-          Preparing your natural healing journey...
+          Your natural healing journey...
         </p>
 
         {/* Progress Bar */}

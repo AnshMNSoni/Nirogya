@@ -19,7 +19,7 @@ export const translations = {
     aiSupport: "AI Support",
     whyChoose: "Why Choose Nirogya?",
     whyChooseSubtitle:
-      "Experience the perfect blend of ancient Ayurvedic wisdom and Google's lightning-fast Gemini 2.0 Flash AI technology",
+      "Experience the perfect blend of ancient Ayurvedic wisdom and cutting-edge AI technology.",
     popularRemedies: "Most Popular Remedies",
     popularRemediesSubtitle: "See what conditions our community finds most helpful remedies for",
     usersHelped: "Users helped",
@@ -150,9 +150,6 @@ export const translations = {
     emailUs: "Email Us",
     emailDesc: "Get in touch via email",
     callUs: "Call Us",
-    callDesc: "Speak with our support team",
-    visitUs: "Visit Us",
-    visitDesc: "Our office location",
     businessHours: "Business Hours",
     businessHoursDesc: "When we're available",
     medicalEmergencyTitle: "Medical Emergency?",
@@ -201,7 +198,7 @@ export const translations = {
     termsOfService: "Terms of Service",
     disclaimer: "Disclaimer",
     copyright:
-      "© 2024 Nirogya. All rights reserved. This website provides educational information only and should not replace professional medical advice.",
+      "All rights reserved. This site is for educational purposes only and is not a substitute for professional medical advice.",
     developedBy: "Developed with ❤️ by",
 
     // Remedy Card
@@ -450,7 +447,7 @@ export const translations = {
     termsOfService: "सेवा की शर्तें",
     disclaimer: "अस्वीकरण",
     copyright:
-      "© 2024 Nirogya। सभी अधिकार सुरक्षित। यह वेबसाइट केवल शैक्षिक जानकारी प्रदान करती है और पेशेवर चिकित्सा सलाह का विकल्प नहीं होनी चाहिए।",
+      "सभी अधिकार सुरक्षित। यह वेबसाइट केवल शैक्षिक जानकारी प्रदान करती है और पेशेवर चिकित्सा सलाह का विकल्प नहीं होनी चाहिए।",
     developedBy: "❤️ के साथ विकसित",
 
     // Remedy Card
@@ -698,7 +695,7 @@ export const translations = {
     termsOfService: "सेवाशर्ताः",
     disclaimer: "अस्वीकरणम्",
     copyright:
-      "© 2024 Nirogya। सर्वाणि अधिकाराः सुरक्षिताः। एषः वेबसाइटः केवलं शैक्षणिकसूचनां प्रददाति न च व्यावसायिकचिकित्सासल्लाहस्य विकल्पः भवितुम् अर्हति।",
+      "सर्वाणि अधिकाराः सुरक्षिताः। एषः वेबसाइटः केवलं शैक्षणिकसूचनां प्रददाति न च व्यावसायिकचिकित्सासल्लाहस्य विकल्पः भवितुम् अर्हति।",
     developedBy: "❤️ सह विकसितम्",
 
     // Remedy Card

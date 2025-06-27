@@ -56,16 +56,20 @@ export default function AboutPage() {
 
         {/* What is Ayurveda */}
         <section className="mb-12 sm:mb-16">
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle className="text-xl sm:text-2xl flex items-center">
-                <Leaf className="h-5 w-5 sm:h-6 sm:w-6 mr-2 text-green-600" />
+          <Card className="mb-8 shadow-lg rounded-lg overflow-hidden">
+            <CardHeader className="bg-green-50 dark:bg-green-900 p-6">
+              <CardTitle className="text-xl sm:text-2xl flex items-center text-green-700 dark:text-green-300">
+                <Leaf className="h-5 w-5 sm:h-6 sm:w-6 mr-2 ml-2" />
                 {t("whatIsAyurveda")}
               </CardTitle>
             </CardHeader>
-            <CardContent className="prose prose-base sm:prose-lg max-w-none dark:prose-invert">
-              <p className="text-sm sm:text-base">{t("ayurvedaDescription1")}</p>
-              <p className="text-sm sm:text-base">{t("ayurvedaDescription2")}</p>
+            <CardContent className="p-6 space-y-4">
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                {t("ayurvedaDescription1")}
+              </p>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                {t("ayurvedaDescription2")}
+              </p>
             </CardContent>
           </Card>
         </section>
