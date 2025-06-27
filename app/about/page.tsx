@@ -268,9 +268,9 @@ export default function AboutPage() {
           </Card>
         </section>
 
-        {/* How AyurCure Works */}
+        {/* How Nirogya Works */}
         <section className="mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">{t("ayurcureWorks")}</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">{t("NirogyaWorks")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <Card className="text-center">
               <CardHeader>

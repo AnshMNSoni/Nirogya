@@ -17,7 +17,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   // Load saved language from localStorage on mount
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("ayurcure-language") as Language
+    const savedLanguage = localStorage.getItem("Nirogya-language") as Language
     if (savedLanguage && translations[savedLanguage]) {
       setLanguage(savedLanguage)
     }
@@ -25,7 +25,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   // Save language to localStorage when it changes
   useEffect(() => {
-    localStorage.setItem("ayurcure-language", language)
+    localStorage.setItem("Nirogya-language", language)
   }, [language])
 
   const t = (key: keyof typeof translations.en): string => {

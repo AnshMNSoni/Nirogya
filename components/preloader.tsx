@@ -40,7 +40,7 @@ export function Preloader() {
 
         {/* Brand Name with Animation */}
         <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent animate-fade-in">
-          AyurCure
+          Nirogya
         </h1>
 
         {/* Loading Text */}

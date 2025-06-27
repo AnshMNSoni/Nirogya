@@ -11,7 +11,7 @@ import { Preloader } from "@/components/preloader"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "AyurCure - Natural Ayurvedic Remedies",
+  title: "Nirogya - Natural Ayurvedic Remedies",
   description:
     "Discover personalized Ayurvedic solutions for common health problems with AI-powered recommendations and traditional wisdom.",
     generator: 'v0.dev'

@@ -30,7 +30,7 @@ export function Navigation() {
         <Link href="/" className="flex items-center space-x-2 touch-target">
           <Leaf className="h-6 w-6 sm:h-8 sm:w-8 text-green-600 dark:text-green-400" />
           <span className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-            AyurCure
+            Nirogya
           </span>
         </Link>
 

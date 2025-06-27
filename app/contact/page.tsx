@@ -18,8 +18,8 @@ const contactInfo = [
     icon: Mail,
     titleKey: "emailUs" as const,
     descKey: "emailDesc" as const,
-    contact: "support@ayurcure.com",
-    action: "mailto:support@ayurcure.com",
+    contact: "support@Nirogya.com",
+    action: "mailto:support@Nirogya.com",
   },
   {
     icon: Phone,

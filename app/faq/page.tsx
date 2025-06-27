@@ -41,17 +41,17 @@ const faqData = [
   {
     id: 1,
     category: "general",
-    question: "What is AyurCure and how does it work?",
+    question: "What is Nirogya and how does it work?",
     answer:
-      "AyurCure is an AI-powered platform that combines ancient Ayurvedic wisdom with Google's Gemini 2.0 Flash technology. Simply describe your symptoms, and our AI analyzes them against thousands of traditional remedies to provide personalized, natural healing solutions.",
+      "Nirogya is an AI-powered platform that combines ancient Ayurvedic wisdom with Google's Gemini 2.0 Flash technology. Simply describe your symptoms, and our AI analyzes them against thousands of traditional remedies to provide personalized, natural healing solutions.",
     popular: true,
   },
   {
     id: 2,
     category: "safety",
-    question: "Is AyurCure safe to use?",
+    question: "Is Nirogya safe to use?",
     answer:
-      "Yes, AyurCure provides traditional Ayurvedic remedies with comprehensive safety guidelines. However, always consult healthcare providers for serious conditions. Our platform includes emergency detection and will recommend immediate medical attention when necessary.",
+      "Yes, Nirogya provides traditional Ayurvedic remedies with comprehensive safety guidelines. However, always consult healthcare providers for serious conditions. Our platform includes emergency detection and will recommend immediate medical attention when necessary.",
     popular: true,
   },
   {
@@ -89,9 +89,9 @@ const faqData = [
   {
     id: 7,
     category: "general",
-    question: "Is AyurCure free to use?",
+    question: "Is Nirogya free to use?",
     answer:
-      "Yes, AyurCure is completely free to use. We believe natural healing knowledge should be accessible to everyone. Our mission is to democratize Ayurvedic wisdom through modern technology.",
+      "Yes, Nirogya is completely free to use. We believe natural healing knowledge should be accessible to everyone. Our mission is to democratize Ayurvedic wisdom through modern technology.",
     popular: true,
   },
   {
@@ -113,17 +113,17 @@ const faqData = [
   {
     id: 10,
     category: "technical",
-    question: "Can I use AyurCure on mobile devices?",
+    question: "Can I use Nirogya on mobile devices?",
     answer:
-      "AyurCure is fully responsive and optimized for mobile devices. You can access all features, including the hospital map and remedy generation, from your smartphone or tablet.",
+      "Nirogya is fully responsive and optimized for mobile devices. You can access all features, including the hospital map and remedy generation, from your smartphone or tablet.",
     popular: false,
   },
   {
     id: 11,
     category: "general",
-    question: "What makes AyurCure different from other health apps?",
+    question: "What makes Nirogya different from other health apps?",
     answer:
-      "AyurCure uniquely combines 5,000-year-old Ayurvedic wisdom with cutting-edge AI technology. We focus on natural, accessible remedies while maintaining safety through emergency detection and medical disclaimers.",
+      "Nirogya uniquely combines 5,000-year-old Ayurvedic wisdom with cutting-edge AI technology. We focus on natural, accessible remedies while maintaining safety through emergency detection and medical disclaimers.",
     popular: true,
   },
   {

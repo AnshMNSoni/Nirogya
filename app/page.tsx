@@ -237,7 +237,7 @@ export default function HomePage() {
                     <Leaf className="h-6 w-6 text-white" />
                   </div>
                   <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-                    AyurCure
+                    Nirogya
                   </span>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md leading-relaxed">
