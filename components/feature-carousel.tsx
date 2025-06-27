@@ -131,7 +131,7 @@ export function FeatureCarousel() {
         </Button>
 
         {/* Feature Indicators */}
-        <div className="flex space-x-3">
+        <div className="flex space-x-0">
           {features.map((feature, index) => (
             <button
               key={index}

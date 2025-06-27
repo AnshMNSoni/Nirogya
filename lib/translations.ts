@@ -11,9 +11,9 @@ export const translations = {
     // Home Page
     heroTitle: "Natural Healing with Ancient Wisdom",
     heroSubtitle:
-      "Get personalized Ayurvedic remedies for your health concerns using Google's latest Gemini 2.0 Flash AI technology combined with thousands of years of traditional healing knowledge.",
+      "Discover personalized Ayurvedic remedies powered by modern AI and ancient healing wisdom.",
     searchPlaceholder: "What's bothering you? (e.g., headache, cold, stress)",
-    happyUsers: "Happy Users",
+    happyUsers: "Healed Naturally",
     naturalRemedies: "Natural Remedies",
     successRate: "Success Rate",
     aiSupport: "AI Support",
@@ -29,7 +29,7 @@ export const translations = {
     testimonialsSubtitle: "Real stories from people who found healing through Ayurveda",
     ctaTitle: "Ready to Start Your Natural Healing Journey?",
     ctaSubtitle:
-      "Join thousands of people who have found relief through personalized Ayurvedic remedies powered by Gemini 2.0 Flash AI",
+      "Join thousands of people who have found relief through personalized Ayurvedic remedies powered by Nirogya",
     getRemedyNow: "Get Your Remedy Now",
     learnAbout: "Learn About Ayurveda",
 
@@ -193,7 +193,7 @@ export const translations = {
 
     // Footer
     footerDescription:
-      "Bridging ancient Ayurvedic wisdom with Google's cutting-edge Gemini 2.0 Flash AI technology to provide personalized natural healing solutions for everyone.",
+      "Where timeless Ayurveda meets AI to heal you - naturally and personally.",
     quickLinks: "Quick Links",
     support: "Support",
     helpCenter: "Help Center",

@@ -30,7 +30,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 dark:from-green-950 dark:via-blue-950 dark:to-purple-950 overflow-hidden">
+      <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 dark:from-green-950 dark:via-blue-950 dark:to-purple-950 overflow-hidden w-full">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
         {/* Floating Elements */}
@@ -49,12 +49,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="relative max-w-7xl mx-auto text-center w-full">
           <div className="animate-fade-in space-y-4 sm:space-y-6">
-            <Badge className="mb-4 sm:mb-6 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 hover-lift text-xs sm:text-sm px-3 py-1">
-              {t("badge")}
-            </Badge>
-
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent leading-tight px-2">
               {t("heroTitle")}
             </h1>
@@ -65,7 +61,7 @@ export default function HomePage() {
           </div>
 
           {/* Quick Search */}
-          <div className="max-w-2xl mx-auto mb-6 sm:mb-8 animate-slide-in-bottom px-4">
+          <div className="max-w-2xl mx-auto mb-6 sm:mb-8 animate-slide-in-bottom px-4 w-full">
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-2">
               <Input
                 type="text"
@@ -93,9 +89,9 @@ export default function HomePage() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto stagger-animation px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto stagger-animation px-4 w-full">
             <div className="text-center hover-scale p-2">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600 dark:text-green-400">50k+</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600 dark:text-green-400">99.99%</div>
               <div className="text-xs sm:text-sm text-muted-foreground">{t("happyUsers")}</div>
             </div>
             <div className="text-center hover-scale p-2">
@@ -249,9 +245,6 @@ export default function HomePage() {
                     className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
                   >
                     🌿 100% Natural
-                  </Badge>
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
-                    🤖 Gemini 2.0 Flash AI
                   </Badge>
                   <Badge
                     variant="secondary"

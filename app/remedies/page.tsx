@@ -231,10 +231,8 @@ export default function RemediesPage() {
         {/* Disclaimer */}
         <Alert className="mt-12">
           <AlertTriangle className="h-4 w-4" />
-          <AlertDescription>
-            <strong>Important:</strong> This information is for educational purposes only and should not replace
-            professional medical advice. Always consult with a qualified healthcare provider before starting any new
-            treatment, especially if you have serious or persistent symptoms.
+          <AlertDescription className="text-justify">
+            <strong>Important:</strong> This content is for educational purposes only and is not a substitute for professional medical advice. Always consult a qualified healthcare provider before beginning any new treatment, especially if you have serious or ongoing symptoms.
           </AlertDescription>
         </Alert>
       </div>

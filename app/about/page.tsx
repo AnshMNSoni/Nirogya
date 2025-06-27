@@ -271,7 +271,7 @@ export default function AboutPage() {
         {/* How Nirogya Works */}
         <section className="mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">{t("NirogyaWorks")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-3">
             <Card className="text-center">
               <CardHeader>
                 <div className="mx-auto w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4">
