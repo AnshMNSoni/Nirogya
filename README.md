@@ -1,4 +1,4 @@
-❤️‍🩹 Nirogya Healthcare ❤️‍🩹
+# ❤️‍🩹 Nirogya Healthcare ❤️‍🩹
 
 Welcome to **Nirogya**, an Ayurvedic healthcare application designed to provide personalized remedies for common ailments, promoting a natural and holistic approach to wellness. This app is built with the mission to assist individuals who rely heavily on high-dose medications or frequent doctor visits for minor health issues.
 
@@ -20,11 +20,11 @@ I developed Nirogya because I observed many individuals taking high-dose medicat
 
 ## 📸 Glimpses:
 
-**Large Screens:** 
+### Large Screens: 
 ![Screenshot 2025-06-28 113223](https://github.com/user-attachments/assets/993ed848-2c99-4dab-9102-ea46b20fbbcd)
 
-**Small Screens:** <br/>
-![image](https://github.com/user-attachments/assets/a6d90997-3b7e-4e76-b8dc-fd45a528f557)
+### Small Screens: <br/>
+<img src="https://github.com/user-attachments/assets/a6d90997-3b7e-4e76-b8dc-fd45a528f557" width="250" height="500" />
 
 
 ## 💫 Getting Started 
