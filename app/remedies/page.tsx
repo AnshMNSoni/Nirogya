@@ -13,17 +13,39 @@ import { RemedyCard } from "@/components/remedy-card"
 import { useToast } from "@/hooks/use-toast"
 import { useLanguage } from "@/contexts/language-context"
 
+// Define interfaces for type safety
+interface Remedy {
+  title: string
+  description: string
+  severity: "mild" | "moderate" | "serious"
+  ingredients: string[]
+  steps: string[]
+  precautions: string[]
+  duration: string
+  frequency: string
+  benefits: string[]
+  contraindications: string[]
+  isEmergency: boolean
+  emergencyMessage?: string
+  quotaExceeded?: boolean
+  fallback?: boolean
+}
+
+interface LanguageContext {
+  t: (key: string) => string
+}
+
 export default function RemediesPage() {
-  const [symptoms, setSymptoms] = useState("")
-  const [age, setAge] = useState("")
-  const [gender, setGender] = useState("")
-  const [remedy, setRemedy] = useState(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState("")
+  const [symptoms, setSymptoms] = useState<string>("")
+  const [age, setAge] = useState<string>("")
+  const [gender, setGender] = useState<string>("")
+  const [remedy, setRemedy] = useState<Remedy | null>(null)
+  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string>("")
 
   const searchParams = useSearchParams()
   const { toast } = useToast()
-  const { t } = useLanguage()
+  const { t } = useLanguage() as LanguageContext
 
   useEffect(() => {
     const searchQuery = searchParams.get("search")
@@ -32,11 +54,33 @@ export default function RemediesPage() {
     }
   }, [searchParams])
 
+  const isHealthRelated = (input: string): boolean => {
+    const healthKeywords = [
+      'pain', 'fever', 'cough', 'cold', 'headache', 'stomach', 'ayurveda', 'disease',
+      'infection', 'allergy', 'diabetes', 'hypertension', 'arthritis', 'fatigue',
+      'nausea', 'vomiting', 'diarrhea', 'constipation', 'anxiety', 'depression',
+      'skin', 'rash', 'injury', 'inflammation', 'cancer', 'heart', 'liver', 'kidney'
+    ]
+    const lowerInput = input.toLowerCase().trim()
+    return healthKeywords.some(keyword => lowerInput.includes(keyword)) || lowerInput.length === 0
+  }
+
   const handleSearch = async () => {
     if (!symptoms.trim()) {
+      setError(t("enterSymptoms") || "Please enter symptoms to search.")
       toast({
         title: t("enterSymptoms"),
         description: t("enterSymptomsDesc"),
+        variant: "destructive",
+      })
+      return
+    }
+
+    if (!isHealthRelated(symptoms)) {
+      setError("Irrelevant Search")
+      toast({
+        title: "Irrelevant Search",
+        description: "Please enter a health-related query, such as a disease or symptom.",
         variant: "destructive",
       })
       return
@@ -69,7 +113,7 @@ export default function RemediesPage() {
         throw new Error(errorData.error || `HTTP ${response.status}: Failed to get remedy`)
       }
 
-      const data = await response.json()
+      const data: Remedy = await response.json()
       console.log("Received data:", data)
 
       if (data.quotaExceeded) {
@@ -92,9 +136,9 @@ export default function RemediesPage() {
       }
 
       setRemedy(data)
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Client error:", err)
-      const errorMessage = err.message || "Failed to generate remedy. Please try again."
+      const errorMessage = (err instanceof Error ? err.message : "Failed to generate remedy. Please try again.")
       setError(errorMessage)
 
       toast({
@@ -142,6 +186,7 @@ export default function RemediesPage() {
                 onChange={(e) => setSymptoms(e.target.value)}
                 className="mt-2 w-full text-base py-3 px-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 dark:focus:border-green-400 dark:focus:ring-green-900 transition-all duration-200"
                 onKeyPress={(e) => e.key === "Enter" && handleSearch()}
+                aria-label={t("symptomsPlaceholder")}
               />
             </div>
 
@@ -157,6 +202,7 @@ export default function RemediesPage() {
                   value={age}
                   onChange={(e) => setAge(e.target.value)}
                   className="mt-2 w-full text-base py-3 px-4 border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:border-green-500 focus:ring-2 focus:ring-green-200 dark:focus:border-green-400 dark:focus:ring-green-900 transition-all duration-200"
+                  aria-label={t("agePlaceholder")}
                 />
               </div>
               <div className="space-y-2">
@@ -179,7 +225,7 @@ export default function RemediesPage() {
 
             <Button
               onClick={handleSearch}
-              disabled={loading || !symptoms.trim()}
+              disabled={loading}
               size="lg"
               className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
@@ -198,7 +244,6 @@ export default function RemediesPage() {
           </CardContent>
         </Card>
 
-        {/* Error Message */}
         {error && (
           <Alert className="mb-8 border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950">
             <AlertTriangle className="h-4 w-4 text-red-600" />

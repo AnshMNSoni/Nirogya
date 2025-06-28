@@ -380,16 +380,6 @@ export function HospitalMap() {
                       </div>
                     </div>
                     <div className="flex flex-row sm:flex-col gap-2">
-                      <Button
-                        asChild
-                        size="sm"
-                        className="bg-red-600 hover:bg-red-700 flex-1 sm:flex-none touch-target"
-                      >
-                        <a href={`tel:${hospital.phone || "911"}`}>
-                          <Phone className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
-                          <span className="hidden sm:inline">{t("call")}</span>
-                        </a>
-                      </Button>
                       <Button asChild size="sm" variant="outline" className="flex-1 sm:flex-none touch-target">
                         <a
                           href={`https://www.google.com/maps/dir/?api=1&destination=${hospital.lat},${hospital.lon}`}
