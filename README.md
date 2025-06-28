@@ -16,7 +16,9 @@ I developed Nirogya because I observed many individuals taking high-dose medicat
 - **Personal Mission**: Created with a motive to help people who often resort to high-dose medicines or frequent doctor visits for small diseases. Nirogya provides **personalized remedies** to encourage a healthier, natural lifestyle.
 - **Focused Search**: Implements a strict policy where **only disease-relevant searches** are processed; other queries (e.g., food, entertainment) are rejected to maintain focus on health.
 
+---
 ### 📌 **Live Demo:** [Click here](https://nirogya-health.netlify.app/)
+---
 
 ## 📸 Glimpses:
 
