@@ -12,7 +12,7 @@ export const translations = {
     heroTitle: "Natural Healing with Ancient Wisdom",
     heroSubtitle:
       "Discover personalized Ayurvedic remedies powered by modern AI and ancient healing wisdom.",
-    searchPlaceholder: "What's bothering you? (e.g., headache, cold, stress)",
+    searchPlaceholder: "What's bothering you? (e.g., headache, cold)",
     happyUsers: "Healed Naturally",
     naturalRemedies: "Natural Remedies",
     successRate: "Success Rate",
