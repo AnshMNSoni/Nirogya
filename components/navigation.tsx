@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Leaf, Menu, X } from "lucide-react"
+import { Leaf, Menu, X, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "./theme-toggle"
 import { LanguageSelector } from "./language-selector"
@@ -67,7 +67,19 @@ export function Navigation() {
         <div className="flex items-center space-x-1 sm:space-x-2">
           <LanguageSelector />
           <ThemeToggle />
-
+          {/* Like button for desktop view */}
+          <Link
+            href="https://github.com/sponsors/AnshMNSoni"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              "hidden lg:inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium",
+              "text-foreground border-pink-500 hover:bg-pink-100 dark:hover:bg-pink-900/30"
+            )}
+          >
+            <Heart className="w-4 h-4 text-pink-500" />
+            Like
+          </Link>
           {/* Mobile menu button */}
           <Button
             variant="ghost"
@@ -100,6 +112,22 @@ export function Navigation() {
                 {t(item.key)}
               </Link>
             ))}
+            {/* Like button for mobile view */}
+            <Link
+              href="https://github.com/sponsors/AnshMNSoni"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "block px-4 py-3 text-base font-medium rounded-lg transition-colors touch-target",
+                "text-foreground hover:bg-pink-100 dark:hover:bg-pink-900/30"
+              )}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <div className="flex items-center gap-2">
+                <Heart className="w-4 h-4 text-pink-500" />
+                Like
+              </div>
+            </Link>
           </nav>
         </div>
       )}
