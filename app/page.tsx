@@ -213,7 +213,7 @@ export default function HomePage() {
               asChild
               size="lg"
               variant="outline"
-              className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 border-white text-white hover:bg-white hover:text-green-600 hover-lift touch-target"
+              className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 border-white dark:text-white dark:hover:bg-gray-800 hover:bg-white text-green-600 hover:text-green-600 hover-lift touch-target"
             >
               <Link href="/about">{t("learnAbout")}</Link>
             </Button>
