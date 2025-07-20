@@ -14,7 +14,9 @@ export const metadata: Metadata = {
   title: "Nirogya - Natural Ayurvedic Remedies",
   description:
     "Discover personalized Ayurvedic solutions for common health problems with AI-powered recommendations and traditional wisdom.",
-    generator: 'v0.dev'
+  icons: {
+    icon: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
