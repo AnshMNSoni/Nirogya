@@ -5,7 +5,8 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Leaf, Menu, X, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "./theme-toggle"
+// import { ThemeToggle } from "./theme-toggle"
+import { AnimatedThemeToggler } from "@/components/magicui/animated-theme-toggler";
 import { LanguageSelector } from "./language-selector"
 import { useLanguage } from "@/contexts/language-context"
 import { cn } from "@/lib/utils"
@@ -66,7 +67,7 @@ export function Navigation() {
 
         <div className="flex items-center space-x-1 sm:space-x-2">
           <LanguageSelector />
-          <ThemeToggle />
+          <AnimatedThemeToggler />
           {/* Like button for desktop view */}
           <Link
             href="https://github.com/sponsors/AnshMNSoni"
